@@ -26,7 +26,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-black font-['Space_Grotesk',sans-serif] flex flex-col">
+    <div className="min-h-screen antialiased bg-black font-sans flex flex-col">
       <header className="w-full p-6">
         <Logo />
       </header>
@@ -49,6 +49,65 @@ function App() {
 
           <LogoScroll />
 
+          {/* Our Services Section */}
+          <section className="mb-16">
+            <div className="text-center mb-8">
+              <AnimatedText
+                text="Our AI Integration Services"
+                className="text-white font-bold text-3xl sm:text-4xl mb-4"
+                delay={1200}
+              />
+              <AnimatedText
+                text="End-to-end solutions tailored to your needs"
+                className="text-gray-300 text-lg"
+                delay={1400}
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="bg-gray-800 rounded-lg p-6">
+                <AnimatedText text="Custom Model Development" className="text-white/90 text-xl font-medium mb-2" delay={1600} />
+                <AnimatedText text="Leverage domain-specific datasets to build models that solve your unique challenges." className="text-gray-400 text-base" delay={1700} />
+              </div>
+              <div className="bg-gray-800 rounded-lg p-6">
+                <AnimatedText text="Data Pipeline Integration" className="text-white/90 text-xl font-medium mb-2" delay={1800} />
+                <AnimatedText text="Seamlessly connect your data sources for real-time insights and decision making." className="text-gray-400 text-base" delay={1900} />
+              </div>
+              <div className="bg-gray-800 rounded-lg p-6">
+                <AnimatedText text="Cloud Deployment & Scaling" className="text-white/90 text-xl font-medium mb-2" delay={2000} />
+                <AnimatedText text="Deploy AI workloads on the cloud with scalable architecture and low latency." className="text-gray-400 text-base" delay={2100} />
+              </div>
+              <div className="bg-gray-800 rounded-lg p-6">
+                <AnimatedText text="Monitoring & Maintenance" className="text-white/90 text-xl font-medium mb-2" delay={2200} />
+                <AnimatedText text="Stay ahead with continuous model monitoring, updates, and support." className="text-gray-400 text-base" delay={2300} />
+              </div>
+            </div>
+          </section>
+
+          {/* Our Process Section */}
+          <section className="mb-16 bg-gray-900 rounded-lg px-6 py-10">
+            <div className="text-center mb-8">
+              <AnimatedText
+                text="Our 3-Step Integration Process"
+                className="text-white font-bold text-3xl sm:text-4xl mb-4"
+                delay={2400}
+              />
+            </div>
+            <div className="flex flex-col sm:flex-row justify-between space-y-8 sm:space-y-0 sm:space-x-8">
+              <div className="flex-1 text-center">
+                <div className="text-white/80 text-lg font-semibold mb-2">1. Discover</div>
+                <div className="text-gray-400">We analyze your business needs and identify AI opportunities.</div>
+              </div>
+              <div className="flex-1 text-center">
+                <div className="text-white/80 text-lg font-semibold mb-2">2. Build</div>
+                <div className="text-gray-400">Our team develops and tests custom AI models and integrations.</div>
+              </div>
+              <div className="flex-1 text-center">
+                <div className="text-white/80 text-lg font-semibold mb-2">3. Scale</div>
+                <div className="text-gray-400">We deploy, monitor, and optimize at scale to ensure performance.</div>
+              </div>
+            </div>
+          </section>
+
           <div className="mb-16">
             {features.map((feature, index) => (
               <FeatureCard
@@ -62,7 +121,9 @@ function App() {
 
           <div className="text-center">
             <AnimatedText delay={1800} className="">
-              <Button>Talk to Us</Button>
+              <a href="mailto:reachnikhilsuresh@gmail.com?subject=Talk%20to%20Us">
+                <Button>Talk to Us</Button>
+              </a>
             </AnimatedText>
           </div>
         </div>
